@@ -50,12 +50,14 @@
   color: var(--mustard);
   text-transform: uppercase;
   opacity: 0;
+  margin-bottom: 8px;
 }
 
 .nameBlock {
   display: flex;
   flex-direction: column;
   line-height: 0.92;
+  margin-top: clamp(12px, 3vw, 32px);
 }
 
 .nameLine {
