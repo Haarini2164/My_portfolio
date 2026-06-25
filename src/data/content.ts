@@ -1,7 +1,7 @@
 // All portfolio copy lives here. Edit text without touching component code.
 
 export const hero = {
-  tagline: 'M.TECH INTEGRATED · DATA SCIENCE ENGINEERING',
+  tagline:                   'M.TECH INTEGRATED · DATA SCIENCE ENGINEERING',
   nameLine1: 'HAARINI',
   nameLine2: 'SK',
   subtitle:
