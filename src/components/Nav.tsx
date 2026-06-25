@@ -41,6 +41,7 @@ export default function Nav() {
             handleLinkClick('#home');
           }}
         >
+        H
         </a>
 
         <div className={styles.links}>
