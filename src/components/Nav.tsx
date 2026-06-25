@@ -41,7 +41,7 @@ export default function Nav() {
             handleLinkClick('#home');
           }}
         >
-          HAARINI SK
+          
         </a>
 
         <div className={styles.links}>
