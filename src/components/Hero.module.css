@@ -50,14 +50,16 @@
   color: var(--mustard);
   text-transform: uppercase;
   opacity: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0;
+  display: block;
 }
 
 .nameBlock {
   display: flex;
   flex-direction: column;
-  line-height: 0.92;
-  margin-top: clamp(12px, 3vw, 32px);
+  line-height: 1;
+  margin-top: clamp(20px, 4vw, 40px);
+  gap: 4px;
 }
 
 .nameLine {

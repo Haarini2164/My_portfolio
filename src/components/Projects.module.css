@@ -32,7 +32,7 @@
 .cardsViewport {
   position: relative;
   width: min(640px, 84vw);
-  min-height: clamp(360px, 48vh, 480px);
+  min-height: clamp(380px, 52vh, 500px);
 }
 
 .card {
@@ -40,14 +40,13 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background: var(--surface);
   border: 1px solid var(--line-strong);
   border-radius: 8px;
   padding: clamp(28px, 4vw, 48px);
   will-change: transform, opacity;
-  height: fit-content;
-  min-height: 100%;
+  overflow-y: auto;
 }
 
 .cardNumber {
