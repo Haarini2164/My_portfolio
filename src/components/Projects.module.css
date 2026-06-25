@@ -1,0 +1,180 @@
+.projects {
+  position: relative;
+  padding: clamp(80px, 10vw, 140px) 0;
+  overflow: hidden;
+}
+
+.head {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--paper);
+  margin-top: 16px;
+}
+
+/* Carousel stage */
+.stage {
+  position: relative;
+  margin-top: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(420px, 56vh, 560px);
+}
+
+.cardsViewport {
+  position: relative;
+  width: min(640px, 84vw);
+  height: 100%;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  padding: clamp(28px, 4vw, 48px);
+  will-change: transform, opacity;
+}
+
+.cardNumber {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--mustard);
+  letter-spacing: 0.08em;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  color: var(--paper);
+  margin-top: 12px;
+  line-height: 1.25;
+}
+
+.cardDescription {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--paper-dim);
+  margin-top: 18px;
+}
+
+.cardTech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.techTag {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--teal);
+  border: 1px solid var(--teal-dim);
+  border-radius: 100px;
+  padding: 5px 13px;
+}
+
+.cardLink {
+  display: inline-block;
+  margin-top: 26px;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--mustard);
+  border-bottom: 1px solid var(--mustard-dim);
+  padding-bottom: 3px;
+  width: fit-content;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cardLink:hover {
+  color: var(--paper);
+  border-color: var(--paper);
+}
+
+/* Arrows */
+.arrow {
+  position: relative;
+  z-index: 20;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(244, 241, 234, 0.05);
+  border: 1px solid var(--line-strong);
+  backdrop-filter: blur(10px);
+  color: var(--paper);
+  font-size: 1.8rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 18px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.arrow:hover {
+  background: rgba(232, 163, 61, 0.12);
+  border-color: var(--mustard);
+  transform: scale(1.06);
+}
+
+.arrowLeft {
+  padding-right: 2px;
+}
+
+.arrowRight {
+  padding-left: 2px;
+}
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.dot:hover {
+  background: var(--mustard-dim);
+}
+
+.dotActive {
+  background: var(--mustard);
+  transform: scale(1.3);
+}
+
+@media (max-width: 700px) {
+  .stage {
+    height: clamp(480px, 70vh, 600px);
+  }
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    margin: 0 8px;
+  }
+  .cardsViewport {
+    width: 80vw;
+  }
+}

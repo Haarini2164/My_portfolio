@@ -1,0 +1,63 @@
+.skillsSection {
+  position: relative;
+  padding: 32px 0 clamp(80px, 12vw, 140px);
+}
+
+.skillsRows {
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skillRow {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-items: center;
+  gap: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.skillRow:last-child {
+  border-bottom: none;
+}
+
+.skillCategory {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+
+.skillChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skillChip {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--paper);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 100px;
+  padding: 9px 18px;
+  transition: border-color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+
+.skillChip:hover {
+  border-color: var(--mustard);
+  background: var(--surface-raised);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 760px) {
+  .skillRow {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
